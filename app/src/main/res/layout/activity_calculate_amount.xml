@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateAmount">
+
+
+
+    <TextView
+        android:id="@+id/textLables"
+        android:textSize="25dp"
+        android:text="Sl.No"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textLableDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/textLables"
+        android:text="Date"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textLablePackets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+       android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:text="Packet"
+        android:textSize="25dp" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="384dp"
+        android:layout_height="337dp"
+        android:layout_below="@+id/textLables"
+        android:layout_above="@+id/relativeBottom"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/textList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 22/10/2019 100" />
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeBottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+
+
+
+
+
+
+    <TextView
+        android:text="Total Packets"
+        android:textSize="25dp"
+        android:id="@+id/textTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"/>
+
+
+    <TextView
+        android:text="1000"
+        android:textSize="25dp"
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:text="Amount/Packet"
+        android:textSize="25dp"
+        android:id="@+id/textAmountlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTotalLabel"
+        android:layout_alignParentLeft="true"/>
+
+
+    <EditText
+        android:gravity="center"
+        android:textSize="25dp"
+        android:id="@+id/eTextRate"
+        android:hint="amount/packet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTotal"
+        android:layout_marginRight="10dp"
+        android:inputType="numberSigned"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/buttonCalc"
+        android:text="Calculate"
+        android:layout_below="@id/textAmountlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        />
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:text="1000"
+        android:textSize="25dp"
+        android:id="@+id/textTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eTextRate"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

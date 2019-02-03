@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+
+    tools:showIn="@layout/app_bar_main">
+
+
+    <View
+        android:id="@+id/fakeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignRight="@id/fakeView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="4dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_marginRight="16dp"
+            android:text="YEAR : "
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textStartMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textYear"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_marginRight="16dp"
+            android:text="Start Month : "
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textEndMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textStartMonth"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_marginRight="16dp"
+            android:text="End Month : "
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/buttonShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textEndMonth"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="16dp"
+            android:onClick="showInRecyclerView"
+            android:text="SHOW" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@id/fakeView"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4dp"
+        android:padding="8dp">
+
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerStartMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerYear"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="16dp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerEndMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerStartMonth"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/buttonCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerEndMonth"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="92dp"
+            android:layout_marginRight="16dp"
+            android:onClick="calculateTheAmount"
+            android:text="Claculate" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

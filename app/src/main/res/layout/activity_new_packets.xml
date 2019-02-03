@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPackets">
+
+
+
+        <View android:id="@+id/fakeView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLeft"
+            android:layout_marginRight="4dp"
+            android:padding="8dp"
+            android:background="#4D0091EA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/fakeView"
+            android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:id="@+id/textDate"
+                    android:text="Date"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textTpackets"
+                    android:text="Total Packets"
+                    android:textSize="16dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/textDelivered"
+                    android:text="Delivered Packets"
+                    android:textSize="16dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/textTpackets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textAttempted"
+                    android:text="Attempted Packets"
+                    android:textSize="16dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/textDelivered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textRejected"
+                    android:text="Rejected Packets"
+                    android:textSize="16dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/textAttempted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeRight"
+            android:layout_marginLeft="4dp"
+            android:padding="8dp"
+            android:background="#4D00B8D4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/fakeView"
+            android:layout_alignParentRight="true">
+
+
+
+                <EditText
+                    android:id="@+id/eTextDate"
+                    android:hint="dd/mm/yyyy"
+                    android:textSize="16dp"
+                    android:inputType="date"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/eTextTpackets"
+                    android:hint="100"
+                    android:textSize="16dp"
+                    android:inputType="numberSigned"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/eTextDate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:id="@+id/eTextDelivered"
+                    android:hint="90"
+                    android:textSize="16dp"
+                    android:inputType="numberSigned"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/eTextTpackets"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/eTextAttempted"
+                    android:hint="5"
+                    android:textSize="16dp"
+                    android:inputType="numberSigned"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/eTextDelivered"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    android:id="@+id/eTextRejected"
+                    android:hint="5"
+                    android:textSize="16dp"
+                    android:inputType="numberSigned"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:layout_below="@+id/eTextAttempted"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:background="#4D00B8D4"
+            android:text="ADD"
+            android:textStyle="bold"
+            android:textColor="#304FFE"
+            android:onClick="addNewPackets"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="50dp"
+            android:layout_alignRight="@id/fakeView"
+            android:layout_below="@+id/relativeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <Button
+            android:background="#4D0091EA"
+            android:text="CANCEL"
+            android:textStyle="bold"
+            android:textColor="#D50000"
+            android:onClick="cancelled"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="50dp"
+            android:layout_alignLeft="@id/fakeView"
+            android:layout_below="@+id/relativeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
