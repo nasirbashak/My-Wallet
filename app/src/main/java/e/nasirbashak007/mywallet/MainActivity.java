@@ -195,6 +195,10 @@ public class MainActivity extends AppCompatActivity
 
         Intent i = new Intent(MainActivity.this,CalculateAmount.class);
 
+        i.putExtra("YEAR",year);
+        i.putExtra("START_MONTH", startMonth);
+        i.putExtra("END_MONTH",endMonth);
+
         startActivity(i);
 
 
@@ -238,9 +242,9 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        Toast.makeText(getApplicationContext(),year +" year",Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(),startMonth+" start",Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(),endMonth+" end",Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getApplicationContext(),year +" year",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),startMonth+" start",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),endMonth+" end",Toast.LENGTH_SHORT).show();
 
 
 

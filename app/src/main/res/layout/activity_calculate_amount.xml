@@ -34,7 +34,7 @@
         android:layout_alignParentTop="true"
        android:layout_alignParentRight="true"
         android:layout_marginRight="50dp"
-        android:text="Packet"
+        android:text="Packets"
         android:textSize="25dp" />
 
 
@@ -53,6 +53,7 @@
 
         <TextView
             android:id="@+id/textList"
+            android:textSize="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1 22/10/2019 100" />
@@ -66,7 +67,8 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        >
 
 
 
@@ -126,6 +128,7 @@
         android:layout_below="@id/textAmountlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateTheAmount"
         android:layout_alignParentLeft="true"
         />
 
